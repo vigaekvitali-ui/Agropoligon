@@ -1,69 +1,99 @@
-/* Базовые стили */
-body {
+/* ------------------------------
+   БАЗОВЫЕ НАСТРОЙКИ
+------------------------------ */
+
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f3f4f6;
-    color: #111827;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1, h2, h3, h4 {
-    margin: 0 0 10px;
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7fa;
+    color: #0f172a;
+    line-height: 1.6;
 }
 
-p {
-    margin: 0 0 10px;
+img {
+    max-width: 100%;
+    display: block;
 }
 
-a {
-    color: #0ea5e9;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Контейнер */
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
 }
 
-/* Hero */
+/* ------------------------------
+   ГЕРОЙ (ШАПКА)
+------------------------------ */
+
 .hero {
     position: relative;
-    background: url('../img/hero.jpg') center/cover no-repeat;
-    color: white;
-    padding: 120px 0;
+    width: 100%;
+    height: 85vh;
+    background-image: url('../img/college-bg.jpg'); /* ← твоя картинка */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(2px);
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    text-align: center;
+    color: #e2faff;
+    max-width: 800px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 0 0 12px #00eaff;
+}
+
+.hero-text p {
+    margin-top: 12px;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.hero-action {
+    margin-top: 30px;
 }
 
 .btn-outline {
     display: inline-block;
-    padding: 12px 24px;
-    border: 2px solid #38bdf8;
-    color: #38bdf8;
+    padding: 14px 28px;
+    border: 2px solid #00eaff;
+    color: #00eaff;
+    font-size: 18px;
     border-radius: 8px;
+    text-decoration: none;
     transition: 0.3s;
 }
 
 .btn-outline:hover {
-    background: #38bdf8;
-    color: #0f172a;
+    background: #00eaff;
+    color: #001219;
+    box-shadow: 0 0 20px #00eaff;
 }
 
-/* Секции */
+/* ------------------------------
+   СЕКЦИИ
+------------------------------ */
+
 .section {
     padding: 60px 0;
 }
@@ -73,10 +103,20 @@ a:hover {
 }
 
 .section-gray {
-    background: #e5e7eb;
+    background: #e2e8f0;
 }
 
-/* Карточки */
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #0f172a;
+}
+
+/* ------------------------------
+   КАРТОЧКИ
+------------------------------ */
+
 .cards {
     display: grid;
     gap: 20px;
@@ -95,74 +135,99 @@ a:hover {
 }
 
 .card {
-    background: white;
+    background: #ffffff;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
 }
 
-/* Футер */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+/* ------------------------------
+   ФУТЕР
+------------------------------ */
+
 .footer {
-    background: #020617;
-    color: #e5e7eb;
-    padding: 40px 0 20px;
-    font-size: 14px;
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 40px 0;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
-    gap: 32px;
-    align-items: flex-start;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
 }
 
 .footer-block h3,
 .footer-block h4 {
+    color: #00eaff;
     margin-bottom: 10px;
-    font-size: 16px;
 }
 
-.footer-block p {
-    margin: 4px 0;
+.footer-block a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.footer-block a:hover {
+    text-decoration: underline;
 }
 
 .footer-bottom {
-    margin-top: 24px;
     text-align: center;
-    border-top: 1px solid rgba(148, 163, 184, 0.3);
-    padding-top: 12px;
-    font-size: 13px;
-    opacity: 0.7;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #1e293b;
 }
 
-/* QR-дрон */
-.qr-drone-wrapper {
-    width: 160px;
-    height: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* ------------------------------
+   АДАПТИВНОСТЬ
+------------------------------ */
 
-/* Адаптив */
 @media (max-width: 900px) {
-    .cards-5 {
+    .cards-5,
+    .cards-4 {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
     }
 }
 
-@media (max-width: 768px) {
-    .cards-3,
-    .cards-4,
-    .cards-5 {
-        grid-template-columns: 1fr;
+@media (max-width: 600px) {
+    .hero {
+        height: 70vh;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .btn-outline {
+        font-size: 16px;
+        padding: 10px 20px;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
-    }
-
-    .qr-drone-wrapper {
-        margin-top: 10px;
     }
 }
