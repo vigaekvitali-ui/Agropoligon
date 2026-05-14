@@ -319,3 +319,11 @@ body {
         grid-template-columns: 1fr;
     }
 }
+.qr-drone-wrapper {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
