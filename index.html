@@ -118,40 +118,70 @@
     </section>
 
 </main>
-<div class="footer-block">
+
+<footer class="footer">
+    <div class="container footer-grid">
+        <div class="footer-block">
+            <h3>Ошмянский государственный аграрно‑экономический колледж</h3>
+            <p>Цифровой агрополигон и подготовка специалистов для современного АПК.</p>
+        </div>
+        <h4>Контакты</h4>
+    <p><strong>УО "Ошмянский государственный аграрно‑экономический колледж"</strong></p>
+    <p>231103, Гродненская область,<br>г. Ошмяны, ул. Чкалова, д. 15</p>
+
+    <p><strong>Телефоны:</strong></p>
+    <p>+375 1593 76‑964 — приёмная / факс</p>
+    <p>+375 1593 21‑660 — директор</p>
+    <p>+375 1593 77‑558 — главный бухгалтер</p>
+
+    <p><strong>E‑mail:</strong> info@oaek.by</p>
+    <p><strong>Сайт:</strong> <a href="https://www.oaek.by" target="_blank">www.oaek.by</a></p>
+</div>
+            <h4>Полезные ссылки</h4>
+            <p><a href="#">Точнее, проще, прибыльнее</a></p>
+            <p><a href="#">Прецизионное земледелие</a></p>
+        </div>
+        <div class="footer-block">
     <h4>QR‑код агрополигона</h4>
     <div class="qr-drone-wrapper">
-        <svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140">
+        <svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+
             <!-- Фон -->
-            <rect x="0" y="0" width="140" height="140" rx="20" fill="#020617"/>
+            <rect x="0" y="0" width="160" height="160" rx="28" fill="#020617"/>
 
             <!-- Корпус дрона -->
-            <rect x="20" y="20" width="100" height="100" rx="24" fill="#020617" stroke="#11c5c6" stroke-width="2"/>
+            <rect x="35" y="35" width="90" height="90" rx="22"
+                  fill="#020617" stroke="#11c5c6" stroke-width="3"/>
 
-            <!-- Пропеллеры по углам -->
-            <circle cx="20" cy="20" r="10" fill="none" stroke="#11c5c6" stroke-width="2"/>
-            <circle cx="120" cy="20" r="10" fill="none" stroke="#11c5c6" stroke-width="2"/>
-            <circle cx="20" cy="120" r="10" fill="none" stroke="#11c5c6" stroke-width="2"/>
-            <circle cx="120" cy="120" r="10" fill="none" stroke="#11c5c6" stroke-width="2"/>
+            <!-- Пропеллеры -->
+            <circle cx="30" cy="30" r="14" fill="none" stroke="#11c5c6" stroke-width="3"/>
+            <circle cx="130" cy="30" r="14" fill="none" stroke="#11c5c6" stroke-width="3"/>
+            <circle cx="30" cy="130" r="14" fill="none" stroke="#11c5c6" stroke-width="3"/>
+            <circle cx="130" cy="130" r="14" fill="none" stroke="#11c5c6" stroke-width="3"/>
 
-            <!-- Линии к пропеллерам -->
-            <line x1="30" y1="20" x2="50" y2="50" stroke="#11c5c6" stroke-width="1.5" opacity="0.8"/>
-            <line x1="110" y1="20" x2="90" y2="50" stroke="#11c5c6" stroke-width="1.5" opacity="0.8"/>
-            <line x1="30" y1="120" x2="50" y2="90" stroke="#11c5c6" stroke-width="1.5" opacity="0.8"/>
-            <line x1="110" y1="120" x2="90" y2="90" stroke="#11c5c6" stroke-width="1.5" opacity="0.8"/>
+            <!-- Линии от корпуса к пропеллерам -->
+            <line x1="44" y1="44" x2="30" y2="30" stroke="#11c5c6" stroke-width="2"/>
+            <line x1="116" y1="44" x2="130" y2="30" stroke="#11c5c6" stroke-width="2"/>
+            <line x1="44" y1="116" x2="30" y2="130" stroke="#11c5c6" stroke-width="2"/>
+            <line x1="116" y1="116" x2="130" y2="130" stroke="#11c5c6" stroke-width="2"/>
 
-            <!-- Центр — "сенсор" дрона -->
-            <circle cx="70" cy="70" r="8" fill="#020617" stroke="#11c5c6" stroke-width="2"/>
-            <circle cx="70" cy="70" r="3" fill="#11c5c6"/>
+            <!-- Центральный сенсор -->
+            <circle cx="80" cy="80" r="10" fill="#020617" stroke="#11c5c6" stroke-width="3"/>
+            <circle cx="80" cy="80" r="4" fill="#11c5c6"/>
 
-            <!-- Сам QR‑код (рабочий) -->
+            <!-- QR‑код -->
             <image
-                href="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://vigaekvitali-ui.github.io/Agropoligon/"
-                x="25" y="25" width="90" height="90"
+                href="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://vigaekvitali-ui.github.io/Agropoligon/"
+                x="30" y="30" width="100" height="100"
             />
         </svg>
     </div>
 </div>
+
+    <div class="footer-bottom">
+        <p>© Ошмянский ГАЭК, цифровой агрополигон</p>
+    </div>
+</footer>
 
 </body>
 </html>
