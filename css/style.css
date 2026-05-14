@@ -326,4 +326,25 @@ body {
     align-items: center;
     justify-content: center;
 }
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.qr-drone-wrapper {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 30px;
+    opacity: 0.6;
+    font-size: 14px;
+}
 
